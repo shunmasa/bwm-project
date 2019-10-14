@@ -2,8 +2,13 @@ import React from "react";
 import {RentalList} from './RentalList';
 import { connect } from "react-redux";
 import * as actions from "actions";
-export class RentalListing extends React.Component {
+
+
+
+
+class RentalListing extends React.Component {
   
+
   componentWillMount() {
     this.props.dispatch(actions.fetchRentals());
   }
@@ -21,7 +26,7 @@ export class RentalListing extends React.Component {
 //anything data <= reducer <- store
 function mapStateToProps(state) {
   return {
-    rentals: state.rentals.data
+    rentals: state.rentals.data 
   }; //rentals(anything) accessible to rentals
   //rental-reducer  data:actions.rentals access to this data to send out
 }
